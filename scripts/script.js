@@ -85,9 +85,7 @@ submitBtn.onclick = () => {
   }
 
   // validate confirm password
-  if (confirmpasswordInput.value.length >= 6 &&
-    confirmpasswordInput !== passwordInput.value.length
-  ){
+  if (confirmpasswordInput.value === passwordInput.value){
     confirmpasswordInput.classList.add("is-valid");
     isConfirmPasswordOk = true;
   } else {
@@ -112,8 +110,8 @@ dangerBtn.onclick = () => {
   firstNameInput.classList.remove("is-invalid");
 
   lastNameInput.value = "";
-  firstNameInput.classList.remove("is-valid");
-  firstNameInput.classList.remove("is-invalid");
+  lastNameInput.classList.remove("is-valid");
+  lastNameInput.classList.remove("is-invalid");
 
   emailInput.value = "";
   emailInput.classList.remove("is-invalid");
